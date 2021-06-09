@@ -147,12 +147,12 @@ public class ViewActivity extends AppCompatActivity {
         if(IntroActivity.TorB==0){
 
             queryUrl="http://openapi.tago.go.kr/openapi/service/TrainInfoService/getStrtpntAlocFndTrainInfo?serviceKey="//요청 URL
-                    + TrainKey +"&numOfRows=100&pageNo=1&arrPlaceId="+location+"&depPlaceId="+departure+"&depPlandTime="+Year+setTime(Month)+setTime(Day)+"&trainGradeCode="+trains;
+                    + TrainKey +"&numOfRows=100&pageNo=1&depPlaceId="+departure+"&arrPlaceId="+location+"&depPlandTime="+Year+setTime(Month)+setTime(Day)+"&trainGradeCode="+trains;
         }
         // 버스 정보 받아오기
         else{
             queryUrl="http://openapi.tago.go.kr/openapi/service/ExpBusInfoService/getStrtpntAlocFndExpbusInfo?serviceKey="//요청 URL
-                    + BusKey +"&numOfRows=100&pageNo=1&depTerminalId="+location+"&arrTerminalId="+departure+"&depPlandTime="+Year+setTime(Month)+setTime(Day);
+                    + BusKey +"&numOfRows=100&pageNo=1&depTerminalId="+departure+"&arrTerminalId="+location+"&depPlandTime="+Year+setTime(Month)+setTime(Day)+"&busGradeId="+trains;
         }
         //--- xmlPullParser ---//
         try {
